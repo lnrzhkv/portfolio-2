@@ -1,0 +1,35 @@
+.recent-work {
+  .recent-work-title-wrapper {
+    @include flex(flex-start);
+    gap: 14px;
+    background-color: var(--color-dark);
+  }
+
+  & .recent-work-content-wrapper {
+    @include flex(center, flex-start);
+    flex-direction: column;
+    row-gap: 38px;
+    margin-top: 70px;
+    background-color: var(--color-dark);
+    width: 514px;
+    height: 371px;
+
+    & .recent-work-content {
+      @include flex(space-between);
+      background-color: var(--color-dark);
+      width: 100%;
+
+      & div {
+        color: var(--color-soft-grey);
+        @include font-inter(20px, 400);
+        background-color: var(--color-dark);
+      }
+
+      & .content-left {
+        @include flex(space-between);
+        flex-direction: column;
+        background-color: var(--color-dark);
+      }
+    }
+  }
+}

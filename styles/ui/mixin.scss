@@ -1,0 +1,21 @@
+@mixin base-block {
+  border: 2px solid var(--color-grey-border);
+  border-radius: 14px;
+  padding: 60px 40px;
+  background-color: var(--color-dark);
+  color: var(--color-text-secondary);
+}
+
+@mixin flex($j: center, $a: center) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+}
+
+@mixin font-inter($fsize: normal, $fweight: normal, $lh: normal, $ls: normal) {
+  font-family: "Inter", sans-serif;
+  font-weight: $fweight;
+  font-size: $fsize;
+  line-height: $lh;
+  letter-spacing: $ls;
+}

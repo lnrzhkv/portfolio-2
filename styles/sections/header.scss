@@ -1,0 +1,94 @@
+.header {
+  @include flex;
+
+  .logo-wrapper {
+    border: 2px solid var(--color-grey-border);
+    border-radius: 48px;
+    padding: 12px;
+    width: 64px;
+    height: 64px;
+    background: var(--color-dark);
+
+    & img {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  & :hover {
+    border-color: var(--color-accent-light);
+    transition: all 1s;
+  }
+
+  .header-menu {
+    @include flex;
+    border: 2px solid #262626;
+    border-radius: 48px;
+    padding: 20px 66px;
+    width: 1166px;
+    height: 64px;
+    background: var(--color-dark);
+
+    .header-menu-list {
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+      @include flex(space-between);
+
+      &-item {
+        @include font-inter(20px, 400);
+        color: var(--color-text-primary);
+        background: var(--color-dark);
+        cursor: pointer;
+
+        & a {
+          color: var(--color-text-primary);
+          position: relative;
+          cursor: pointer;
+          line-height: 1;
+          text-decoration: none;
+        }
+
+        a:after {
+          display: block;
+          position: absolute;
+          left: 0;
+          width: 0px;
+          height: 2px;
+          background-color: var(--color-accent-light);
+          content: "";
+          transition: width 0.3s ease-out;
+        }
+
+        a:hover:after,
+        a:focus:after {
+          width: 100%;
+        }
+
+        & a:hover {
+          color: #e4633fb2;
+        }
+      }
+
+      :nth-child(1) {
+        @include font-inter(20px, 700);
+        color: var(--color-accent-light);
+        background: var(--color-dark);
+
+        & a {
+          color: var(--color-accent-light);
+        }
+
+        & a:hover {
+          color: #fffffffa;
+        }
+      }
+    }
+  }
+
+  & :hover {
+    border-color: var(--color-accent-light);
+    transition: all 1s;
+  }
+}

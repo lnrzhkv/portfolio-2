@@ -10,10 +10,10 @@
   --color-text-primary: #fff;
   --color-text-secondary: #fdfdfd;
   --color-grey-border: #262626;
-  --color-orange-border: #e4643f;
 
-  --color-orange: #e63e21;
-  --color-orange-light: #f35034;
+  --color-accent-border: #e4643f;
+  --color-accent: #e63e21;
+  --color-accent-light: #f35034;
 
   --color-grad: #1b1b1b,
     linear-gradient(
@@ -27,12 +27,4 @@
       rgba(230, 62, 33, 0.2) 0%,
       rgba(51, 19, 14, 0.2) 100%
     );
-  transform: rotate(180deg);
-
-  --fs-xs: 20px;
-  --fs-s: 24px;
-  --fs-m: 36px;
-
-  --mb-s: 20px;
-  --mb-m: 70px: ;
 }
