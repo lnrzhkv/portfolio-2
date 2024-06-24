@@ -1,0 +1,10 @@
+.ios-mobile {
+  padding: 50px 54px 0;
+  border: 2px solid var(--color-grey-border);
+  border-radius: 14px;
+  width: 594px;
+  height: 809px;
+  background: var(--color-dark);
+  @include flex(space-between);
+  flex-direction: column;
+}

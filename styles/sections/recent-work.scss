@@ -26,7 +26,8 @@
       }
 
       & .content-left {
-        @include flex(space-between);
+        @include flex(center, flex-start);
+        row-gap: 12px;
         flex-direction: column;
         background-color: var(--color-dark);
       }

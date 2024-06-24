@@ -1,0 +1,9 @@
+.ai-music {
+  border: 2px solid var(--color-grey-border);
+  border-radius: 14px;
+  width: 586px;
+  @include flex(space-between);
+  flex-direction: column;
+  padding: 34px 54px;
+  background: var(--color-dark);
+}

@@ -1,0 +1,16 @@
+.no-code {
+  border-radius: 14px;
+  padding: 60px 40px;
+  width: 286px;
+  height: 149px;
+  text-align: center;
+  @include font-inter(24px, 500);
+  color: var(--color-soft-grey);
+  border: 2px solid var(--color-grey-border);
+
+  background: linear-gradient(
+    16deg,
+    rgba(230, 62, 33, 0.2) 0%,
+    rgba(51, 19, 14, 0.2) 100%
+  );
+}

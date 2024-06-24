@@ -1,0 +1,15 @@
+.product-design {
+  padding: 60px 40px;
+  text-align: center;
+  @include font-inter(24px, 500);
+  color: var(--color-soft-grey);
+  border: 2px solid var(--color-grey-border);
+  border-radius: 14px;
+  width: 594px;
+
+  background: linear-gradient(
+    189deg,
+    rgba(230, 62, 33, 0.2) 20%,
+    rgba(51, 19, 14, 0.2) 100%
+  );
+}

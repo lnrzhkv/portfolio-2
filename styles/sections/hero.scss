@@ -49,6 +49,7 @@
       & .hero-body-title {
         @include font-inter(36px, 600);
         margin-bottom: 16px;
+        color: var(--color-text-primary);
       }
 
       & .hero-body-subtitle {
