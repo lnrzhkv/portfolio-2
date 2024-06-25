@@ -59,42 +59,35 @@ a {
 
 .grid .product-design {
   grid-area: product-design;
-  // @include base-block;
   height: 150px;
 }
 
 .grid .user-experience {
   grid-area: user-experience;
-  // @include base-block;
   height: 150px;
 }
 
 .grid .no-code {
   grid-area: no-code;
-  // @include base-block;
   height: 150px;
 }
 
 .grid .ai-music {
   grid-area: ai-music;
-  // @include base-block;
   height: 528px;
 }
 
 .grid .ios-mobile {
   grid-area: ios-mobile;
-  // @include base-block;
 }
 
 .grid .ai-map {
   grid-area: ai-map;
-  // @include base-block;
   height: 532px;
 }
 
 .grid .footer {
   grid-area: footer;
-  @include base-block;
 }
 
 .circle-s {
@@ -116,7 +109,7 @@ a {
   height: 40px;
   border-radius: 22px;
   border: 1px solid #000;
-  background-color: #E63E21;
+  background-color: #e63e21;
   box-shadow:
     inset 0 3px 0 0 #e4643f,
     0 4px 13px 0 rgba(230, 62, 33, 0.18);
@@ -126,28 +119,24 @@ a {
   color: var(--color-soft-grey);
   font-size: 24px;
   font-weight: 500;
-  background-color: var(--color-dark);
 }
 
 .title-accent {
   color: var(--color-accent-light);
   font-weight: 500;
   font-size: 24px;
-  background-color: var(--color-dark);
 }
 
 .title-light {
   color: var(--color-text-primary);
   font-weight: 500;
   font-size: 24px;
-  background-color: var(--color-dark);
 }
 
 .subtitle {
   color: var(--color-soft-grey);
   font-weight: 400;
   font-size: 20px;
-  background-color: var(--color-dark);
 }
 
 .title-wrapper {
@@ -160,3 +149,159 @@ a {
     gap: 16px;
   }
 }
+
+.status {
+  @include flex;
+  gap: 4px;
+  background-color: var(--color-dark-special);
+  border: 1px solid var(--color-grey-border);
+  border-radius: 14px;
+  padding: 6px 17px;
+
+  & .status-descr {
+    margin-left: 10px;
+    @include font-inter(14px, 500);
+    text-align: center;
+    color: var(--color-soft-grey);
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(44px, auto);
+    grid-template-areas:
+      "header header"
+      "hero hero"
+      "recent-work recent-work"
+      "product-design product-design"
+      "user-experience no-code"
+      "ios-mobile ios-mobile"
+      "ai-music ai-music"
+      "ai-map ai-map"
+      "footer footer";
+    gap: 12px;
+  }
+
+  .grid .header {
+    grid-area: header;
+    border-radius: unset;
+    width: 327px;
+    height: 44px;
+  }
+
+  .grid .hero {
+    grid-area: hero;
+    @include base-block;
+    border-radius: 8px;
+    padding: 22px 22px 22px 16px;
+    width: 327px;
+    height: 389px;
+  }
+
+  .grid .recent-work {
+    grid-area: recent-work;
+    @include base-block;
+    border-radius: 8px;
+    padding: 22px 20px;
+    width: 327px;
+    height: 341px;
+  }
+
+  .grid .product-design {
+    grid-area: product-design;
+    border-radius: 8px;
+    padding: 33px 22px;
+    width: 327px;
+    height: 82px;
+  }
+
+  .grid .user-experience {
+    grid-area: user-experience;
+    border-radius: 8px;
+    padding: 33px 22px;
+    width: 157px;
+    height: 83px;
+  }
+
+  .grid .no-code {
+    grid-area: no-code;
+    border-radius: 8px;
+    padding: 33px 22px;
+    width: 157px;
+    height: 83px;
+  }
+
+  .grid .ai-music {
+    grid-area: ai-music;
+    border-radius: 8px;
+    width: 327px;
+    height: 298px;
+  }
+
+  .grid .ios-mobile {
+    grid-area: ios-mobile;
+    border-radius: 8px;
+    width: 327px;
+    height: 446px;
+  }
+
+  .grid .ai-map {
+    grid-area: ai-map;
+    border-radius: 8px;
+    padding: 22px 30px;
+    width: 327px;
+    height: 327px;
+  }
+
+  .grid .footer {
+    grid-area: footer;
+    border-radius: 8px;
+    padding: 23px 40px;
+    width: 327px;
+    height: 148px;
+  }
+
+  .title-pale {
+    font-size: 16px;
+  }
+
+  .title-light {
+    font-size: 16px;
+  }
+
+  .title-accent {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .circle-s-light {
+    width: 6px;
+    height: 6px;
+  }
+
+  .title-wrapper {
+    & .circle-m {
+      display: none;
+
+    }
+    & .title-textarea {
+      @include flex(space-between, flex-start);
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  }
+

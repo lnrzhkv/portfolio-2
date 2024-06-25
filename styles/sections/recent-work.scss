@@ -34,3 +34,23 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .recent-work {
+    .recent-work-content-wrapper {
+      width: 286px;
+      height: 240px;
+      gap: 20px;
+      margin-top: 36px;
+
+      .recent-work-content {
+        .content-left {
+          gap: 8px;
+        }
+        & div {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

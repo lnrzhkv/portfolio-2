@@ -3,13 +3,41 @@
   text-align: center;
   @include font-inter(24px, 500);
   color: var(--color-soft-grey);
-  border: 2px solid var(--color-grey-border);
   border-radius: 14px;
   width: 594px;
+  position: relative;
 
   background: linear-gradient(
-    189deg,
-    rgba(230, 62, 33, 0.2) 20%,
-    rgba(51, 19, 14, 0.2) 100%
-  );
+      65deg,
+      rgba(51, 19, 14, 0%) 0%,
+      rgba(51, 19, 14, 0%) 80%,
+      rgba(230, 62, 33, 0.445) 100%
+    ),
+    linear-gradient(#1b1b1b, #1b1b1b);
+
+  background-color: red;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    top: -2px;
+    left: -2px;
+    border-radius: inherit;
+    z-index: -1;
+    background: linear-gradient(
+        65deg,
+        var(--color-grey-border) 0%,
+        var(--color-grey-border) 80%,
+        #e63e21 100%
+      ),
+      linear-gradient(#1b1b1b, #1b1b1b);
+  }
+}
+
+@media (max-width: 375px) {
+  .product-design {
+    font-size: 14px;
+  }
 }

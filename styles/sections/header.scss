@@ -73,7 +73,6 @@
 
       :nth-child(1) {
         @include font-inter(20px, 700);
-        color: var(--color-accent-light);
         background: var(--color-dark);
 
         & a {
@@ -90,5 +89,73 @@
   & :hover {
     border-color: var(--color-accent-light);
     transition: all 1s;
+  }
+
+  .hamburger {
+    display: none;
+    height: 50px;
+    width: 100%;
+
+    .hamburger-toggle {
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      row-gap: 2px;
+      width: 24px;
+      height: fit-content;
+      cursor: pointer;
+
+      .hamburger-item {
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-text-primary);
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    .logo-wrapper {
+      border-radius: 33px;
+      padding: 8px;
+      width: 44px;
+      height: 44px;
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .header-menu {
+      width: 283px;
+      height: 100%;
+      padding: 10px 16px;
+
+      .header-menu-list {
+        & :nth-child(1) {
+          & a {
+            font-size: 14px;
+          }
+        }
+
+        & :nth-child(2) {
+          display: none;
+        }
+
+        & :nth-child(3) {
+          display: none;
+        }
+        // display: none;
+      }
+
+      .hamburger {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 32px;
+      }
+    }
   }
 }

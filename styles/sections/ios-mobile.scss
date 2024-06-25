@@ -7,4 +7,27 @@
   background: var(--color-dark);
   @include flex(space-between);
   flex-direction: column;
+
+  .arrow-up {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .ios-mobile {
+    padding: 28px 28px 0;
+    @include flex(space-between);
+
+    .arrow-up {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(8deg);
+    }
+    & img {
+      width: 238px;
+    }
+  }
 }
