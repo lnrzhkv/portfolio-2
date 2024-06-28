@@ -6,4 +6,28 @@
   @include flex(space-between);
   flex-direction: column;
   width: 586px;
+
+  .arrow-up {
+    display: none;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .ai-map {
+    padding: 23px 30px;
+    @include flex(space-between);
+
+    .arrow-up {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(8deg);
+    }
+    & img {
+      width: 200px;
+    }
+  }
 }

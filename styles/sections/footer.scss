@@ -53,3 +53,22 @@
     }
   }
 }
+
+
+@media (max-width: 375px) {
+  .footer {
+    flex-direction: column-reverse;
+
+    .footer-social {
+      ul {
+
+        & :nth-child(1) {
+          font-size: 16px;
+        }
+        & li {
+        font-size: 16px;
+      }
+      }
+    }
+  }
+}
